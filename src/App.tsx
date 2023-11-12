@@ -1,30 +1,38 @@
-const Link = (props: JSX.IntrinsicElements['a']) => (
-  <a
-    className="text-pink-500 underline hover:no-underline dark:text-pink-400"
-    {...props}
-  />
-);
+import { captureException, showReportDialog } from '@sentry/react';
+import React, { useState } from 'react';
 
 export default function App() {
+  const [hasError, setHasError] = useState(false);
+
+  const handleClick = () => {
+    setHasError(true);
+    const eventId = captureException(
+      `This is testing Sentry's Report Dialog onClose callback`,
+    );
+    showReportDialog({ eventId, onClose: () => setHasError(false) });
+  };
+
   return (
-    <div className="mx-auto my-8 mt-10 w-8/12 rounded border border-gray-200 p-4 shadow-md dark:border-neutral-600 dark:bg-neutral-800 dark:shadow-none">
-      <h1 className="mb-4 text-4xl">Welcome</h1>
-      <p className="my-4">
-        <em>Minimal, fast, sensible defaults.</em>
-      </p>
-      <p className="my-4">
-        Using <Link href="https://vitejs.dev/">Vite</Link>,{' '}
-        <Link href="https://reactjs.org/">React</Link>,{' '}
-        <Link href="https://www.typescriptlang.org/">TypeScript</Link> and{' '}
-        <Link href="https://tailwindcss.com/">Tailwind</Link>.
-      </p>
-      <p className="my-4">
-        Change{' '}
-        <code className="border-1 2py-1 rounded border border-pink-500 bg-neutral-100 px-1 font-mono text-pink-500 dark:border-pink-400 dark:bg-neutral-700 dark:text-pink-400">
-          src/App.tsx
-        </code>{' '}
-        for live updates.
-      </p>
+    <div
+      className={`flex h-screen w-screen flex-col items-center justify-center text-black ${
+        hasError ? 'bg-red-400' : 'bg-green-400'
+      }`}
+    >
+      <div className="mx-auto my-8 mt-10 w-[480px] rounded border border-gray-200 bg-white p-4 shadow-md">
+        <h1 className="mb-4 text-center text-4xl">
+          Sentry Report Dialog onClose demo
+        </h1>
+        <p className="mb-8 mt-4 px-4">
+          The background will turn{' '}
+          <span className="font-bold text-red-400">red</span> when the report
+          dialog is open and{' '}
+          <span className="font-bold text-green-400">green</span> after closing
+          it.
+        </p>
+        <button className="Button mx-auto" onClick={handleClick}>
+          <span>Capture Exception</span>
+        </button>
+      </div>
     </div>
   );
 }

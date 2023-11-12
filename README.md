@@ -1,51 +1,37 @@
-# Starter Kit for Vite, React, TypeScript, Tailwind and Node.js ESM
+# Sentry Report Dialog `onClose` demo
 
-_Minimal, sensible defaults, fast._
+This is a sample project to demonstrate the usage of an `onClose` callback that can be added to [Sentry's report dialog](https://docs.sentry.io/platforms/javascript/enriching-events/user-feedback/#embeddable-javascript-widget) options.
+In this demo, the background will turn red when the report dialog is open and green after closing it.
 
-Read [the blog post about this template](https://cpojer.net/posts/fastest-frontend-tooling-in-2022).
+[demo.webm](https://github.com/arya-s/sentry-onclose-report-dialog/assets/934045/df8912c4-712d-4417-b712-4f7ce9c43a28)
 
-## Technologies
+### Example usage:
 
-- [Vite](https://vitejs.dev/)
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org)
-- [Tailwind](https://tailwindcss.com/)
-- [pnpm](https://pnpm.io/ja/) (_Optional_)
+```typescript
+import { showReportDialog } from '@sentry/react';
+...
 
-![screenshot of `App.tsx`](./screenshot.png)
-
-## Setup
-
-- Press the "Use this template" on the top of this repository's GitHub page.
-- Run `pnpm install` (or `npm install` if you don't use `pnpm`).
-- `pnpm dev` for development.
-- Use `pnpm test` to run tests.
-- `pnpm build` for production builds.
-
-_Note: You can install `pnpm` via `homebrew` on macOS: `brew install pnpm`._
-
-## Protips for the fastest Developer Experience
-
-- Use [`npm-run-all`](https://github.com/mysticatea/npm-run-all) to parallelize local test runs.
-- Prettier and eslint have `--cache` flags. Use them!
-- Do not run prettier inside of `eslint`. It commonly takes 50% of the eslint runtime!
-- Automatically sort imports when running prettier/saving the document via [`@ianvs/prettier-plugin-sort-imports`](https://github.com/ianvs/prettier-plugin-sort-imports).
-- Use `swc` with `ts-node` for fast node scripts with [ESM](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/). See below ↓
-
-## Run node scripts with ESM and TypeScript, fast.
-
-Create a `script.ts` file, run `chmod x script.ts` and execute it via `./script.ts`.
-
-```
-#!/usr/bin/env node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm
-
-console.log('Your code goes here.');
+// Refresh the page after the user closes the report dialog
+showReportDialog({ onClose: () => location.reload() });
 ```
 
-Use this to restart your scripts instantly when a file changes:
+## Requirements
 
-```
-#!/usr/bin/env NODE_ENV=development node --watch --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm
+- A running sentry devserver that includes [commit 894abds](https://add-link-to-commit).
 
-console.log('This processes instantly restarts when a file changes.');
+## Getting started
+
+1. Setup and run `sentry devserver`, see (https://develop.sentry.dev/environment/)
+2. Set up sentry with your local dsn in `index.tsx`, e.g.
+
+```typescript
+import { init } from '@sentry/react';
+...
+
+init({
+  dsn: 'http://be6167975a3d120e0a783ed697576bf0@127.0.0.1:8000/3',
+});
 ```
+
+3. Run `npm install`
+4. Run `npm run dev`

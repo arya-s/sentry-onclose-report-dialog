@@ -12,6 +12,15 @@
     "pnpm": ">=7.1.0"
   },
   "dependencies": {
+    "@sentry-internal/replay-worker": "file:.yalc/@sentry-internal/replay-worker",
+    "@sentry-internal/tracing": "file:.yalc/@sentry-internal/tracing",
+    "@sentry/browser": "file:.yalc/@sentry/browser",
+    "@sentry/core": "file:.yalc/@sentry/core",
+    "@sentry/react": "file:.yalc/@sentry/react",
+    "@sentry/replay": "file:.yalc/@sentry/replay",
+    "@sentry/types": "file:.yalc/@sentry/types",
+    "@sentry/utils": "file:.yalc/@sentry/utils",
+    "hoist-non-react-statics": "^3.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -33,12 +42,13 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2",
     "vite": "^4.5.0",
-    "vitest": "^0.34.6"
+    "vitest": "^0.34.6",
+    "yalc": "1.0.0-pre.53"
   },
   "scripts": {
     "build": "vite build",
     "dev:update-deps": "rm -rf pnpm-lock.yaml node_modules/ **/node_modules && pnpm install",
-    "dev": "vite dev",
+    "dev": "vite dev --force",
     "format": "prettier --write .",
     "lint:format": "prettier --cache --check .",
     "lint": "eslint --cache .",

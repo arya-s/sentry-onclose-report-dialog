@@ -1,0 +1,37 @@
+{
+  "version": "v1",
+  "packages": {
+    "@sentry/react": {
+      "signature": "541ec81a4ead342bc87aaae4a76df922",
+      "file": true
+    },
+    "@sentry/browser": {
+      "signature": "544979d6bd9136a5789dc2909f67dc95",
+      "file": true
+    },
+    "@sentry/types": {
+      "signature": "c03a0fe4a82ebc03999ed074f1a02b3f",
+      "file": true
+    },
+    "@sentry/utils": {
+      "signature": "1ba9ab3187368a1467a34feae8c52afd",
+      "file": true
+    },
+    "@sentry/core": {
+      "signature": "2b89c5d6c3a116ba5c00d72a96602fc8",
+      "file": true
+    },
+    "@sentry-internal/tracing": {
+      "signature": "fcd9c637891ba00797a5f89af9eb7b16",
+      "file": true
+    },
+    "@sentry/replay": {
+      "signature": "109fc379b17d0efaef94b2474b5d21a0",
+      "file": true
+    },
+    "@sentry-internal/replay-worker": {
+      "signature": "2cc20a642f14d2e87f46d5bc98f20e25",
+      "file": true
+    }
+  }
+}
