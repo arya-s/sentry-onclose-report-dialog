@@ -3,7 +3,7 @@
 This is a sample project to demonstrate the usage of an `onClose` callback that can be added to [Sentry's report dialog](https://docs.sentry.io/platforms/javascript/enriching-events/user-feedback/#embeddable-javascript-widget) options.
 In this demo, the background will turn red when the report dialog is open and green after closing it.
 
-[demo.webm](https://github.com/arya-s/sentry-onclose-report-dialog/assets/934045/df8912c4-712d-4417-b712-4f7ce9c43a28)
+[demo.webm](./demo.webm)
 
 ### Example usage:
 
