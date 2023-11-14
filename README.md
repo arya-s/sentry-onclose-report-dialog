@@ -17,7 +17,7 @@ showReportDialog({ onClose: () => location.reload() });
 
 ## Requirements
 
-- A running sentry devserver that includes [commit 894abds](https://add-link-to-commit).
+- A running sentry devserver that includes [commit 6af8179](https://github.com/arya-s/sentry/commit/6af8179558758ddc514055145547b443f27582d2).
 
 ## Getting started
 
