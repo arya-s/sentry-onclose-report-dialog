@@ -165,12 +165,10 @@ function showReportDialog(options = {}, hub = core.getCurrentHub()) {
   if (onClose) {
     const reportDialogClosedMessageHandler = (event) => {
       if (event.data === 'reportdialog_closed') {
-        if (event.data === 'reportdialog_closed') {
-          try {
-            onClose();
-          } finally {
-            helpers.WINDOW.removeEventListener('message', reportDialogClosedMessageHandler);
-          }
+        try {
+          onClose();
+        } finally {
+          helpers.WINDOW.removeEventListener('message', reportDialogClosedMessageHandler);
         }
       }
     };

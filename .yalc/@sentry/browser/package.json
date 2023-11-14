@@ -1,6 +1,6 @@
 {
   "name": "@sentry/browser",
-  "version": "7.78.0",
+  "version": "7.80.0",
   "description": "Official Sentry SDK for browsers",
   "repository": "git://github.com/getsentry/sentry-javascript.git",
   "homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/browser",
@@ -23,12 +23,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@sentry-internal/tracing": "7.78.0",
-    "@sentry/core": "7.78.0",
-    "@sentry/replay": "7.78.0",
-    "@sentry/types": "7.78.0",
-    "@sentry/utils": "7.78.0"
+    "@sentry-internal/tracing": "7.80.0",
+    "@sentry/core": "7.80.0",
+    "@sentry/replay": "7.80.0",
+    "@sentry/types": "7.80.0",
+    "@sentry/utils": "7.80.0"
   },
   "sideEffects": false,
-  "yalcSig": "544979d6bd9136a5789dc2909f67dc95"
+  "yalcSig": "299711715c189699e494c5b50a7036b9"
 }

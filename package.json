@@ -12,14 +12,8 @@
     "pnpm": ">=7.1.0"
   },
   "dependencies": {
-    "@sentry-internal/replay-worker": "file:.yalc/@sentry-internal/replay-worker",
-    "@sentry-internal/tracing": "file:.yalc/@sentry-internal/tracing",
     "@sentry/browser": "file:.yalc/@sentry/browser",
-    "@sentry/core": "file:.yalc/@sentry/core",
     "@sentry/react": "file:.yalc/@sentry/react",
-    "@sentry/replay": "file:.yalc/@sentry/replay",
-    "@sentry/types": "file:.yalc/@sentry/types",
-    "@sentry/utils": "file:.yalc/@sentry/utils",
     "hoist-non-react-statics": "^3.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

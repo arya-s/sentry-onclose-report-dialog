@@ -2,11 +2,11 @@
   "version": "v1",
   "packages": {
     "@sentry/react": {
-      "signature": "541ec81a4ead342bc87aaae4a76df922",
+      "signature": "3a78c3924d2b91c6d09e832574b35002",
       "file": true
     },
     "@sentry/browser": {
-      "signature": "544979d6bd9136a5789dc2909f67dc95",
+      "signature": "299711715c189699e494c5b50a7036b9",
       "file": true
     },
     "@sentry/types": {
