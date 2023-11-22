@@ -2,11 +2,11 @@
   "version": "v1",
   "packages": {
     "@sentry/react": {
-      "signature": "3a78c3924d2b91c6d09e832574b35002",
+      "signature": "b2281c5bb7daf82c7c75f81c72a04cb3",
       "file": true
     },
     "@sentry/browser": {
-      "signature": "299711715c189699e494c5b50a7036b9",
+      "signature": "bdb76ca0c93fc4af7525499e786f80c0",
       "file": true
     },
     "@sentry/types": {
@@ -14,11 +14,11 @@
       "file": true
     },
     "@sentry/utils": {
-      "signature": "1ba9ab3187368a1467a34feae8c52afd",
+      "signature": "471dd8c4898acb138928b7cf3a44a802",
       "file": true
     },
     "@sentry/core": {
-      "signature": "2b89c5d6c3a116ba5c00d72a96602fc8",
+      "signature": "809d77b6744544c8f326ab4bea055625",
       "file": true
     },
     "@sentry-internal/tracing": {

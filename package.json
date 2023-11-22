@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@sentry/browser": "file:.yalc/@sentry/browser",
+    "@sentry/core": "file:.yalc/@sentry/core",
     "@sentry/react": "file:.yalc/@sentry/react",
     "hoist-non-react-statics": "^3.3.2",
     "react": "^18.2.0",
